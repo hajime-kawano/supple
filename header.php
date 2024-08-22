@@ -23,7 +23,7 @@
     <!--ヘッダー-->
     <header>
         <div class="header_top">
-            <div class="site_logo">
+            <div class="site_logo">テスト
                 <a href="<?php echo esc_url(home_url()); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="ロゴ画像">
                 </a>
