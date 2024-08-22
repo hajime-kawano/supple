@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/destyle.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/destyle.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('img/favicon.ico')); ?>">
 
 
@@ -23,7 +23,7 @@
     <!--ヘッダー-->
     <header>
         <div class="header_top">
-            <div class="site_logo">テスト
+            <div class="site_logo">
                 <a href="<?php echo esc_url(home_url()); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="ロゴ画像">
                 </a>
@@ -66,3 +66,6 @@
         // $img = get_eyecatch_with_default();
         ?>
     </header>
+
+
+    <?php wp_footer(); ?>
