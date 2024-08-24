@@ -99,7 +99,7 @@
 
     <!--ショップリスト-->
     <section id="shoplist" class="shoplist wrapper">
-        <div class="content_container shop_lists_inner">
+        <div class="content_container content_inner">
             <h1 class="english_litter english_letters">SHOP LIST</h1>
             <P>首都圏を中心に6店舗展開しています。<br>
                 お近くの店舗でお待ちしています。</P>
@@ -129,17 +129,23 @@
                 <div class="article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
                     <div class="article_day english_letters">2021/01/01</div>
-                    <div class="article_heading">講習会を開催しました。</div>
+                    <div class="article_excerpt">
+                        <p>講習会を開催しました。</p>
+                    </div>
                 </div>
                 <div class="article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post02 2.jpg">
                     <div class="article_day english_letters">2021/01/01</div>
-                    <div class="article_heading">講習会を開催しました。</div>
+                    <div class="article_excerpt">
+                        <p>講習会を開催しました。</p>
+                    </div>
                 </div>
                 <div class="article">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post03 2.jpg">
                     <div class="article_day english_letters">2021/01/01</div>
-                    <div class="article_heading">講習会を開催しました。</div>
+                    <div class="article_excerpt">
+                        <p>講習会を開催しました。</p>
+                    </div>
                 </div>
             </div>
             <a href="#" class="more_btn btn_black english_letters">MORE</a>

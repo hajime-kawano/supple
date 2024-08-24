@@ -63,3 +63,19 @@ function add_custom_taxonomy_event() {
 	);
 }
 add_action( 'init', 'add_custom_taxonomy_event', 0 );
+
+
+function archive_posts_per_page($query)
+{
+    // 管理画面やメインクエリ以外の場合は処理を終了
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+    
+    // アーカイブページの場合に投稿数を変更
+    if ($query->is_archive()) {
+        $query->set('posts_per_page', 12); // 表示する投稿数を 12件に設定
+    }
+}
+// アクションフックに関数を登録
+add_action('pre_get_posts', 'archive_posts_per_page');

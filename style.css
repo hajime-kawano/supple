@@ -241,7 +241,7 @@ img {
     font-size: 14px;
 }
 
-.article_heading {
+.article_excerpt p {
     padding-top: 8px;
     font-size: 22px;
 }
@@ -254,7 +254,7 @@ img {
 /* Instagram */
 .instagram_wrapper {
     width: 100%;
-    margin: 3rem auto 0;
+    margin: 80px auto 0;
     padding-bottom: 80px;
     text-align: center;
     background-color: #efede9;
@@ -273,7 +273,6 @@ img {
     gap: 0 30px;
     padding-top: 3rem;
 }
-
 
 .footer_bottom {
     display: flex;
@@ -318,6 +317,28 @@ img {
 .copyright {
     margin: 64px 0 24px;
     font-size: 12px;
+}
+
+/* BLOG & NEWS */
+.articles {
+    max-width: 960px;
+}
+
+.thumbnail_img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* ページネーション */
+.pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.page-numbers {
+    padding: 12px;
+    border: #000000 solid 1px;
 }
 
 /* レスポンシブ */
