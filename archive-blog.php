@@ -2,11 +2,11 @@
 
 <!--メイン-->
 <main>
-    <section class="key_visual">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/bg-top-kv 1.png">
+    <section class="page_visual">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/page-kv.jpg">
     </section>
 
-    <div class="content_inner">
+    <div class="content_container article_container">
         <div class="articles wrapper">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -43,15 +43,17 @@
 
         <!-- ページネーション -->
         <div class="pagination">
-            <?php
-            echo paginate_links(array(
-                'total' => $blog_query->max_num_pages,
-                'mid-size' => 1,
-                'prev_text' => '<',
-                'next_text' => '>',
-                'screen_reader_text' => ' ',
-            ));
-            ?>
+            <div class="nav_links">
+                <?php
+                echo paginate_links(array(
+                    'total' => $blog_query->max_num_pages,
+                    'mid-size' => 1,
+                    'prev_text' => '<',
+                    'next_text' => '>',
+                    'type' => 'list'
+                ));
+                ?>
+            </div>
         </div>
     </div>
 </main>

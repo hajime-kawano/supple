@@ -6,6 +6,7 @@ add_action('after_setup_theme', function () {
     //メニューをサポート
     register_nav_menus([
         'global_nav' => 'グローバルナビ',
+		'global_bottom_nav' => 'グローバルナビ_ヘッダー下部用'
     ]);
 });
 
@@ -40,27 +41,41 @@ function add_post_type_event() {
 			'show_in_rest' => true,
 		)
 	);
+
+	register_post_type(
+		'shoplist', /* カスタム投稿タイプのスラッグ */
+		array(
+			'labels'       => array(
+				'name' => 'ショップリスト',
+			),
+			'public'       => true,
+			'has_archive'  => true,
+			'supports'     => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author' ),
+			'show_in_rest' => true,
+		)
+	);
 }
 add_action( 'init', 'add_post_type_event', 0 );
 
 /**
- * カスタム分類「ブログカテゴリー」を追加
+ * カスタム分類を追加
  *
  * @return void
  */
 function add_custom_taxonomy_event() {
 	register_taxonomy(
-		'blog-cat', /* カテゴリーの識別スラッグ */
-		'blog', /* 対象の投稿タイプのスラッグ */
+		'shoplist-cat', /* カテゴリーの識別スラッグ */
+		'shoplist', /* 対象の投稿タイプのスラッグ */
 		array(
 			'hierarchical'          => true,
 			'update_count_callback' => '_update_post_term_count',
-			'label'                 => 'ブログカテゴリー',
+			'label'                 => 'ショップカテゴリー',
 			'public'                => true,
 			'show_ui'               => true,
 			'show_in_rest'          => true,
 		)
 	);
+
 }
 add_action( 'init', 'add_custom_taxonomy_event', 0 );
 

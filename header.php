@@ -23,36 +23,60 @@
 
     <div class="wrap_original">
 
-    <!--ヘッダー-->
-    <header>
-        <div class="header_top">
-            <div class="site_logo">
-                <a href="<?php echo esc_url(home_url()); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="ロゴ画像">
-                </a>
+        <!--ヘッダー-->
+        <header>
+            <div class="header_top">
+                <div class="site_logo">
+                    <a href="<?php echo esc_url(home_url()); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="ロゴ画像">
+                    </a>
+                </div>
+                <nav class="menu_top english_letters">
+                    <?php
+                    //グローバルメニューIDを取得
+                    $menu_name = 'global_nav';
+                    $locations = get_nav_menu_locations();
+                    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+                    $menu_items = wp_get_nav_menu_items($menu->term_id);
+                    ?>
+                    <ul class="menu_list">
+                        <?php foreach ($menu_items as $item) : ?>
+                            <a class="menu_item top_item" href="<?php echo esc_attr($item->url); ?>">
+                                <li><?php echo esc_html($item->title); ?></li>
+                            </a>
+                        <?php endforeach; ?>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <?php
-                //グローバルメニューIDを取得
-                $menu_name = 'global_nav';
-                $locations = get_nav_menu_locations();
-                $menu = wp_get_nav_menu_object($locations[$menu_name]);
-                $menu_items = wp_get_nav_menu_items($menu->term_id);
-                ?>
-                <ul class="menu_list">
-                    <?php foreach ($menu_items as $item) : ?>
-                        <a class="menu_item" href="<?php echo esc_attr($item->url); ?>">
-                            <li><?php echo esc_html($item->title); ?></li>
+            <nav class="menu_bottom">
+                <ul class="bottom_menu_list english_letters">
+                    <li class="bottom_item">
+                        <a href="<?php echo esc_url(home_url()); ?>/concept">
+                            CONCEPT
                         </a>
-                    <?php endforeach; ?>
+                    </li>
+                    <li class="bottom_item">
+                        <a href="<?php echo esc_url(home_url()); ?>/menu">
+                            MENU
+                        </a>
+                    </li>
+                    <li class="bottom_item">
+                        <a href="<?php echo esc_url(home_url()); ?>/shoolist">
+                            SHOPLIST
+                        </a>
+                    </li>
+                    <li class="bottom_item">
+                        <a href="<?php echo esc_url(home_url()); ?>/blog">
+                            BLOG&
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
 
-        </div>
+            <?php
+            // $img = get_eyecatch_with_default();
+            ?>
+        </header>
 
-        <?php
-        // $img = get_eyecatch_with_default();
-        ?>
-    </header>
-
-    <?php wp_footer(); ?>
+        <?php wp_footer(); ?>

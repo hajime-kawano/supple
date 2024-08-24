@@ -72,7 +72,7 @@ img {
 }
 
 .menu_item {
-    font-size: .875rem;
+    font-size: 14px;
     letter-spacing: .2rem;
     padding: 1rem;
     color: #524433;
@@ -82,6 +82,36 @@ img {
     color: #FFFFFF;
     background-color: #524433;
 }
+
+.menu_bottom {
+    background-color: #524433;
+}
+
+.bottom_menu_list {
+    display: none;
+}
+
+.bottom_item {
+    font-size: 12px;
+    letter-spacing: .2rem;
+    padding: 1rem;
+    color: #FFFFFF;
+    position: relative;
+    width: 25%;
+}
+
+.bottom_item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFFFFF;
+    width: 1px;
+    ;
+    height: 16px;
+}
+
 
 /* main */
 .wrap_original {
@@ -94,8 +124,14 @@ img {
     height: 100%;
 }
 
+/* pageビジュアル */
+.page_visual {
+    width: 100%;
+    height: 100%;
+}
+
 .wrapper {
-    width: 90%;
+    max-width: 960px;
     margin: 3rem auto 0;
     text-align: center;
 }
@@ -105,13 +141,13 @@ img {
     margin: 0 auto;
 }
 
-.wrapper h1 {
-    font-size: 2rem;
+.wrapper h2 {
+    font-size: 32px;
     padding-top: 2rem;
 }
 
-.wrapper h2 {
-    font-size: 1.25rem;
+.wrapper h3 {
+    font-size: 20px;
     padding-top: 3rem;
 }
 
@@ -133,8 +169,8 @@ img {
     padding: 1.3125rem 0;
     margin-top: 3rem;
     display: inline-block;
+    position: relative;
 }
-
 
 .btn_black {
     background-color: #000000;
@@ -148,10 +184,49 @@ img {
     display: inline-block;
 }
 
-
-.more_btn::after {
+.btn_black::after {
     content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 1px;
+    background-color: #FFFFFF;
+}
 
+.btn_white::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 1px;
+    background-color: #000000;
+}
+
+.btn_black:hover:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 1px;
+    background-color: #FFFFFF;
+    transition: 100ms;
+}
+
+.btn_white:hover:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 1px;
+    background-color: #000000;
 }
 
 .concept {
@@ -246,6 +321,20 @@ img {
     font-size: 22px;
 }
 
+/* 個別ページ */
+.single_page_container {
+    margin-top: 80px;
+}
+
+.article_content {
+    margin-top: 48px;
+}
+
+.article_content p {
+    margin-top: 40px;
+    line-height: 32px;
+}
+
 /* フッター */
 #footer {
     width: 100%;
@@ -320,9 +409,10 @@ img {
 }
 
 /* BLOG & NEWS */
-.articles {
-    max-width: 960px;
+.article_container {
+    margin-top: 64px;
 }
+
 
 .thumbnail_img {
     aspect-ratio: 1 / 1;
@@ -337,14 +427,88 @@ img {
 }
 
 .page-numbers {
-    padding: 12px;
-    border: #000000 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.pagination li {}
+
+.pagination span:not(.dots) {
+    margin: 0  4px;
+    padding: 12px 16px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    display: block;
+    color: #FFFFFF;
+}
+
+.pagination a {
+    margin: 0 4px;
+    padding: 12px 16px;
+    border: 1px solid #000000;
+    display: block;
+    transition: all .3s linear;
+}
+
+.pagination a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 /* レスポンシブ */
 @media (max-width: 768px) {
-    .content_inner {}
 
+    .site_logo {
+        width: 180px;
+    }
+
+    .wrapper h2 {
+        font-size: 24px;
+        padding-top: 2rem;
+    }
+
+    .wrapper h3 {
+        font-size: 16px;
+        padding-top: 3rem;
+    }
+
+    .wrapper p {
+        line-height: 2rem;
+        padding-top: 2rem;
+        font-size: 14px;
+    }
+
+    .content_inner br {
+        display: none;
+    }
+
+    .more_btn {
+        font-size: 14px;
+    }
+
+    .top_item:not(:last-child) {
+        display: none;
+    }
+
+    .menu_item {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .bottom_menu_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .bottom_item {
+        display: block;
+        letter-spacing: 1px;
+
+    }
 
     /* keyビジュアル */
     .key_visual {
@@ -375,6 +539,18 @@ img {
         padding-top: 40px;
     }
 
+    .drink_categories h3 {
+        text-align: left;
+    }
+
+    .drink_category {
+        font-size: 18px;
+    }
+
+    .drink_item {
+        font-size: 14px;
+    }
+
     /* ショップリスト */
     .shop_lists {
         margin: 48px auto 0;
@@ -384,15 +560,35 @@ img {
         width: 100%;
     }
 
+    .shop_list {
+        font-size: 14px;
+    }
+
     /* BLOG&NEWS */
     .articles {
         display: block;
+    }
+
+    .article_day {
+        padding-top: 16px;
+        font-size: 12px;
     }
 
     .article:not(:first-child) {
         padding-top: 30px;
     }
 
+    .article_excerpt p {
+        font-size: 18px;
+        padding-top: 8px;
+    }
+
+    /* .articles {
+        grid-template-columns: 1fr 1fr;
+    } */
+
+
+    /* フッター */
 
     .instagram_img {
         flex-wrap: wrap;
@@ -406,9 +602,33 @@ img {
 
     .footer_shop_list {
         padding: 5px 12px;
+        font-size: 14px;
     }
 
     .footer_shop_list_span {
         padding: 5px 0;
     }
+}
+
+@media (max-width: 540px) {
+
+    /* BLOG&NEWS */
+    /* .articles {
+        display: block;
+    }
+
+    .article_day {
+        padding-top: 16px;
+        font-size: 12px;
+    }
+
+    .article:not(:first-child) {
+        padding-top: 30px;
+    }
+
+    .article_excerpt p {
+        font-size: 18px;
+        padding-top: 8px;
+    } */
+
 }

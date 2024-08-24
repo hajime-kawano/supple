@@ -8,12 +8,12 @@
 
     <section id="#concept" class="concept wrapper">
         <div class="content_container content_inner">
-            <h1 class="english_letters">CONCEPT</h1>
+            <h2 class="english_letters">CONCEPT</h1>
             <div class="content_img">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/pic-top-consept 2.jpg">
             </div>
             <div class="content">
-                <h2>一杯一杯まごころをこめて調製し、新鮮な香りと豊かな 風味のコーヒーを提供します。</h2>
+                <h3>一杯一杯まごころをこめて調製し、新鮮な香りと豊かな 風味のコーヒーを提供します。</h2>
                 <p>親譲りの無鉄砲で小供の時から損ばかりしている。<br>
                     小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br>
                     なぜそんな無闇をしたと聞く人があるかも知れぬ。</p>
@@ -24,10 +24,10 @@
 
     <section id="menu" class="menu wrapper">
         <div class="content_container">
-            <h1 class="english_letters">MENU</h1>
+            <h2 class="english_letters">MENU</h1>
             <div class="drink_menu">
                 <div class="drink_categories">
-                    <h2 class="drink_category english_letters">DRIP</h2>
+                    <h3 class="drink_category english_letters">DRIP</h2>
                     <dl class="drink_item_wrapper">
                         <div class="drink_item">
                             <dt>エントランスブレンド</dt>
@@ -60,7 +60,7 @@
                     </dl>
                 </div>
                 <div class="drink_categories">
-                    <h2 class="drink_category english_letters">ESPRESSO</h2>
+                    <h3 class="drink_category english_letters">ESPRESSO</h2>
                     <dl class="drink_item_wrapper">
                         <div class="drink_item">
                             <dt>エントランスブレンド</dt>
@@ -100,7 +100,7 @@
     <!--ショップリスト-->
     <section id="shoplist" class="shoplist wrapper">
         <div class="content_container content_inner">
-            <h1 class="english_litter english_letters">SHOP LIST</h1>
+            <h2 class="english_litter english_letters">SHOP LIST</h1>
             <P>首都圏を中心に6店舗展開しています。<br>
                 お近くの店舗でお待ちしています。</P>
             <ul class="shop_lists">
@@ -124,31 +124,39 @@
     <!--ブログ＆ニュース-->
     <section id="blog_news" class="blog&news wrapper">
         <div class="content_container content_inner">
-            <h1 class="english_letters">BLOG & NEWS</h1>
+            <h2 class="english_letters">BLOG & NEWS</h1>
             <div class="articles">
-                <div class="article">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-                    <div class="article_day english_letters">2021/01/01</div>
-                    <div class="article_excerpt">
-                        <p>講習会を開催しました。</p>
-                    </div>
-                </div>
-                <div class="article">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post02 2.jpg">
-                    <div class="article_day english_letters">2021/01/01</div>
-                    <div class="article_excerpt">
-                        <p>講習会を開催しました。</p>
-                    </div>
-                </div>
-                <div class="article">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post03 2.jpg">
-                    <div class="article_day english_letters">2021/01/01</div>
-                    <div class="article_excerpt">
-                        <p>講習会を開催しました。</p>
-                    </div>
-                </div>
+                <?php
+                $args = array(
+                    'post_type' => 'blog',
+                    'posts_per_page' => 3,
+                );
+                $blog_query = new WP_Query($args);
+                if ($blog_query->have_posts()) :
+                    while ($blog_query->have_posts()) : $blog_query->the_post();
+                ?>
+                        <div class="article">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(
+                                    array(
+                                        'class' => 'thumbnail_img', /* 任意のクラス名 */
+                                    )
+                                ); ?>
+                                <div class="article_day english_letters"><?php the_time(get_option('date_format')); ?></div>
+                                <div class="article_excerpt"><?php the_excerpt(); ?></div>
+                            </a>
+                        </div>
+                    <?php
+                    endwhile;
+                    ?>
+                <?php
+                else :
+                    echo 'No posts found';
+                endif;
+                wp_reset_postdata();
+                ?>
             </div>
-            <a href="#" class="more_btn btn_black english_letters">MORE</a>
+            <a href="<?php echo esc_url(home_url()); ?>/blog" class="more_btn btn_black english_letters">MORE</a>
     </section>
 
 </main>
