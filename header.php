@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/destyle.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
@@ -20,6 +20,8 @@
 <body <?php body_class(); ?>>
 
     <?php wp_body_open(); ?>
+
+    <div class="wrap_original">
 
     <!--ヘッダー-->
     <header>

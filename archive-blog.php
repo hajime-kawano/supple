@@ -12,69 +12,14 @@
             <div class="article_day english_letters">2021/01/01</div>
             <div class="article_heading">講習会を開催しました。</div>
         </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
-        <div class="article">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb-post 13.jpg">
-            <div class="article_day english_letters">2021/01/01</div>
-            <div class="article_heading">講習会を開催しました。</div>
-        </div>
 
     </div>
+</main>
 
-    <!--footer-->
+<!--footer-->
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
 
-    </body>
+</body>
 
-    </html>
+</html>

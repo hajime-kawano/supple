@@ -7,7 +7,7 @@
     </section>
 
     <section id="#concept" class="concept wrapper">
-        <div class="content_container">
+        <div class="content_container content_inner">
             <h1 class="english_letters">CONCEPT</h1>
             <div class="content_img">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/pic-top-consept 2.jpg">
@@ -99,7 +99,7 @@
 
     <!--ショップリスト-->
     <section id="shoplist" class="shoplist wrapper">
-        <div class="content_container">
+        <div class="content_container shop_lists_inner">
             <h1 class="english_litter english_letters">SHOP LIST</h1>
             <P>首都圏を中心に6店舗展開しています。<br>
                 お近くの店舗でお待ちしています。</P>
@@ -117,13 +117,13 @@
     </section>
 
     <!--セパレート画像-->
-    <section id="separate" class="separate wrapper">
+    <section id="separate" class="separate">
         <img src="<?php echo get_template_directory_uri(); ?>/img/bg-top-separate 1.jpg">
     </section>
 
     <!--ブログ＆ニュース-->
     <section id="blog_news" class="blog&news wrapper">
-        <div class="content_container">
+        <div class="content_container content_inner">
             <h1 class="english_letters">BLOG & NEWS</h1>
             <div class="articles">
                 <div class="article">
@@ -150,6 +150,8 @@
 <!--footer-->
 
 <?php get_footer(); ?>
+
+</div>
 
 </body>
 

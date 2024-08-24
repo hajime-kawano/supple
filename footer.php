@@ -36,20 +36,20 @@
         <div class="footer_content">
             <div class="footer_shop_lists">
                 <div class="footer_shop_list">北千住店</div>
-                <span>/</span>
+                <span class="footer_shop_list_span">/</span>
                 <div class="footer_shop_list">代官山店</div>
-                <span>/</span>
+                <span class="footer_shop_list_span">/</span>
                 <div class="footer_shop_list">新宿店</div>
-                <span>/</span>
+                <span class="footer_shop_list_span">/</span>
                 <div class="footer_shop_list">八王子店</div>
-                <span>/</span>
+                <span class="footer_shop_list_span">/</span>
                 <div class="footer_shop_list">銀座店</div>
-                <span>/</span>
+                <span class="footer_shop_list_span">/</span>
                 <div class="footer_shop_list">渋谷店</div>
             </div>
             <div class="company_content">
                 <div class="company_name">株式会社 SUPPLE</p>
-                    <div class="company_address">〒123-4567</p>
+                    <div class="company_address">〒123-4567 東京都渋谷区ABC</p>
                     </div>
                 </div>
                 <div class="copyright">
