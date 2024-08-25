@@ -21,13 +21,13 @@
             ?>
                     <div class="article">
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail(
-                                array(
-                                    'class' => 'thumbnail_img', /* 任意のクラス名 */
-                                )
-                            ); ?>
+                            <div class="article_thumbnail">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
                             <div class="article_day english_letters"><?php the_time(get_option('date_format')); ?></div>
-                            <div class="article_excerpt"><?php the_excerpt(); ?></div>
+                            <div class="article_excerpt">
+                                <?php the_excerpt(); ?>
+                            </div>
                         </a>
                     </div>
                 <?php
@@ -40,8 +40,8 @@
             wp_reset_postdata();
             ?>
         </div>
-
-        <!-- ページネーション -->
+        <!--【修正】デザイン-->
+        <!--ページネーション-->
         <div class="pagination">
             <div class="nav_links">
                 <?php

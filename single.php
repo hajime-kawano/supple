@@ -2,7 +2,7 @@
 
 <!--メイン-->
 <main>
-    <section class="key_visual">
+    <section class="page_visual">
         <img src="<?php echo get_template_directory_uri(); ?>/img/page-kv.jpg">
     </section>
 

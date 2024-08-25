@@ -48,6 +48,9 @@
                     </ul>
                 </nav>
             </div>
+
+
+            <!--SPで表示される-->
             <nav class="menu_bottom">
                 <ul class="bottom_menu_list english_letters">
                     <li class="bottom_item">
@@ -55,16 +58,19 @@
                             CONCEPT
                         </a>
                     </li>
+                    <span class=bottom_item_space>|</span>
                     <li class="bottom_item">
                         <a href="<?php echo esc_url(home_url()); ?>/menu">
                             MENU
                         </a>
                     </li>
+                    <span class=bottom_item_space>|</span>
                     <li class="bottom_item">
                         <a href="<?php echo esc_url(home_url()); ?>/shoolist">
                             SHOPLIST
                         </a>
                     </li>
+                    <span class=bottom_item_space>|</span>
                     <li class="bottom_item">
                         <a href="<?php echo esc_url(home_url()); ?>/blog">
                             BLOG&
@@ -73,6 +79,7 @@
 
                 </ul>
             </nav>
+            <!---->
 
             <?php
             // $img = get_eyecatch_with_default();
