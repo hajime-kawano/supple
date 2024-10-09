@@ -4,6 +4,7 @@
 ・remとpxの統一
 ・画像名のスペース削除とコード更新
 ・サムネイル画像の縮尺調整
+・アイキャッチ画像がない場合のサムネイル設定
 ・ページネーションのデザイン
 ・コンテンツが少ない場合のフッター下部固定
 ・メインビジュアルの画像調整
@@ -135,7 +136,7 @@ img {
 /* keyビジュアル */
 .key_visual {
     width: 100%;
-    height: calc(100vh -52.25px) ;
+    height: calc(100vh -52.25px);
 }
 
 /* pageビジュアル */
@@ -275,6 +276,7 @@ img {
     font-size: 32px;
     padding-top: 2rem;
 }
+
 #menu h3 {
     font-size: 20px;
     padding-top: 3rem;
@@ -344,6 +346,7 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 48px 30px;
     padding-top: 3rem;
+    margin: 0 16px;
 }
 
 .article {
@@ -364,6 +367,50 @@ img {
     padding-top: 8px;
     font-size: 22px;
 }
+
+/* shoplist_page */
+.article_container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.shops_articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 16px;
+}
+
+.shop_article {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 45%;
+    margin-top: 48px;
+}
+
+.shop_article_img {}
+
+.shop_article img {
+    object-fit: cover;
+}
+
+.shop_name {
+    font-size: 20px;
+}
+
+.shop_article_excerpt {
+    padding-left: 16px;
+    width: 40%;
+}
+
+.shop_content {
+    padding-top: 8px;
+    font-size: 14px;
+}
+
+
 
 /* 個別ページ */
 .single_page_container {
@@ -502,13 +549,78 @@ img {
 }
 
 /* CONCEPT */
+.concept {
+    margin: 0 auto;
+    padding: 0 16px;
+    text-align: center;
+    align-items: center;
+}
+
+.concept_inner {
+    margin: 32px 0 0;
+    max-width: 960px;
+}
+
+.concept h3 {
+    padding-top: 48px;
+    font-size: 20px;
+}
+
+.concept p {
+    padding-top: 32px;
+    line-height: 32px;
+}
+
+.concept_img {
+    margin-top: 32px;
+}
+
+/* page_menu */
+.menu_page {
+    max-width: 960px;
+    margin: 3rem auto 0;
+    text-align: center;
+}
+
+.menu_page_inner {
+    margin: 0 16px;
+}
+
+.menu_page h3 {
+    font-size: 20px;
+}
+
+.menu_page p {
+    line-height: 2rem;
+    padding-top: 2rem;
+}
+
+.coffee_menu {
+    display: flex;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.coffee_container {
+    text-align: left;
+    margin-left: 48px;
+}
+
+.coffee_container p {
+    padding-top: 8px;
+}
+
+.coffee_content p {
+    padding-top: 16px;
+}
 
 
 /* レスポンシブ */
 @media (max-width: 960px) {
 
     .wrapper,
-    .single_page_container {
+    .single_page_container,
+    .article_container {
         width: 100%;
         margin: 3rem auto 0;
         padding: 0 18px;
@@ -645,6 +757,51 @@ img {
     .article_excerpt p {
         font-size: 18px;
         padding-top: 8px;
+    }
+
+    /* shoplist_page */
+    .shops_articles {
+        flex-direction: column;
+    }
+
+    .shop_article {
+        width: 100%;
+        display: block;
+    }
+    .shop_article:first-child {
+        margin-top: 32px;
+    }
+    .shop_article img {
+        width: 100%;
+    }
+    .shop_article_excerpt {
+        margin-top: 16px;
+    }
+
+    /* concept_page */
+    .concept h3 {
+        font-size: 16px;
+        padding-top: 3rem;
+        line-height: 28px;
+    }
+
+    .concept p {
+        line-height: 2rem;
+        padding-top: 2rem;
+        font-size: 14px;
+    }
+
+    /* menu_page */
+    .menu_page h3 {
+        font-size: 16px;
+        padding-top: 3rem;
+        line-height: 28px;
+    }
+
+    .menu_page p {
+        line-height: 2rem;
+        padding-top: 2rem;
+        font-size: 14px;
     }
 
     /* 404 */

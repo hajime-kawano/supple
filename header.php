@@ -66,7 +66,7 @@
                     </li>
                     <span class=bottom_item_space>|</span>
                     <li class="bottom_item">
-                        <a href="<?php echo esc_url(home_url()); ?>/shoolist">
+                        <a href="<?php echo esc_url(home_url()); ?>/shoplist">
                             SHOPLIST
                         </a>
                     </li>

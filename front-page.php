@@ -140,7 +140,12 @@
                             <div class="article">
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="article_thumbnail">
-                                        <?php the_post_thumbnail(); ?>
+                                        <?php
+                                        if (has_post_thumbnail()):
+                                            the_post_thumbnail(); ?>
+                                        <?php else: ?>
+                                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/thumb-post 13.jpg'); ?>">
+                                        <?php endif; ?>
                                     </div>
                                     <div class="article_day english_letters"><?php the_time(get_option('date_format')); ?></div>
                                     <div class="article_excerpt">

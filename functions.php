@@ -17,7 +17,7 @@ function get_eyecatch_with_default()
         $id = get_post_thumbnail_id();
         $img = wp_get_attachment_image_src($id, 'large');
     else :
-        $img = array(get_template_directory_uri() . '/img/bg_top_kv 1.png');
+        $img = array(get_template_directory_uri() . '/img/thumb-post 13.jpg');
     endif;
 
     return $img;
@@ -52,6 +52,8 @@ function add_post_type_event() {
 			'has_archive'  => true,
 			'supports'     => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author' ),
 			'show_in_rest' => true,
+			'order' => 'ASC', /* 古い順に取得 */
+			'orderby' => 'modified', /* 古い順に取得 */
 		)
 	);
 }
@@ -94,3 +96,4 @@ function archive_posts_per_page($query)
 }
 // アクションフックに関数を登録
 add_action('pre_get_posts', 'archive_posts_per_page');
+
